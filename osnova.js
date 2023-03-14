@@ -43,14 +43,14 @@ function loop() { // игровой процесс
   }
   // добавляем опр точку в начало
   animal.cells.unshift({ x: animal.x, y: animal.y });
-  // удаляем последний эл 
+  // Метод unshift() добавляет один или более элементов в начало массива и возвращает новую длину массива
   if (animal.cells.length > animal.maxCells) {
     animal.cells.pop();
   }
   // красное тиоп яблоко
   zhyk.fillStyle = 'red';
   zhyk.fillRect(apple.x, apple.y, kletka - 1, kletka - 1);
-  // 1 движение = 1 нарисованный квадрат
+  // 1 движение = 1 нарисованный квадрат (Метод fillRect рисует в заданной точке закрашенный прямоугольник. Первые два параметра задают координаты точки, в которой окажется верхний левый угол нарисованного прямоугольника.)
   zhyk.fillStyle = 'black';
   // обработка каждого элемента
   animal.cells.forEach(function (cell, index) {
